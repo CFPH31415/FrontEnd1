@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" /> <!-- Include a local stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    /> <!-- Include Bootstrap icons CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Poppins&family=Roboto&family=Shantell+Sans:ital,wght@0,400;1,300&family=Sono&display=swap"
+      rel="stylesheet"
+    /> <!-- Include Google Fonts -->
+
+    <title>Front-end 1</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <!-- Header section -->
+      <img
+        src="https://i.ibb.co/55Xg5xJ/logo-black.png"
+        class="header__logo"
+        alt="logo-icon"
+      />
+      <nav class="header__nav" id="navBar" onclick="navSlide()">
+        <!-- Navigation menu -->
+        <ul class="header__nav__list">
+          <li>Sports</li>
+          <li>Products</a></li>
+          <li>About us</a></li> 
+          <li>Trainning</a></li>
+          <li>Community</a></li>
+        </ul>
+      </nav>
+      <button class="header__sandwich" id="btnSandwich" onclick="navSlide()">
+        <span class="bi bi-list"></span>
+      </button>
+      <button class="header__contact">Contact</button>
+    </header>
+    <main class="content">
+      <!-- Main content section -->
+      <img
+        class="content__banner"
+        src="https://i.ibb.co/JRwscMy/tennis-banner.png"
+        alt="banner"
+      />
+      <div class="content__box">
+        <h1 class="content__box__title">
+          LIVE: Follow the Telcel Huawei Mexico Open 2022 for free
+        </h1>
+        <p class="content__box__paraph">
+          The final open of the 2022 World Padel Tour season is underway, don't
+          miss out on any of the action!
+        </p>
+        <div class="content__box__btn">
+          <a href="#footer">contact</a>
+        </div>
+      </div>
+    </main>
+    <section class="about">
+      <!-- About section -->
+      <div class="about__box">
+        <h2>What´s different between pros?</h2>
+        <p class="about__box__message">
+          Manage provides all the functionality your
+          teas needs, without the complexity. Our software is tailor-made for modern digital product teams
+        </p>
+      </div>
+      <div class="about__manage">
+        <!-- List of features -->
+        <div class="about__manage__list">
+          <h3><span>01</span>Track company-wide progress</h3>
+          <p>
+            Donec elit est, mattis lacinia arcu eu, efficitur consequat augue.
+            Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
+            nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
+          </p>
+        </div>
+        <div class="about__manage__list">
+          <h3><span>02</span>Advance built-in reports</h3>
+          <p>
+            Donec elit est, mattis lacinia arcu eu, efficitur consequat augue.
+            Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
+            nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
+          </p>
+        </div>
+        <div class="about__manage__list">
+          <h3><span>03</span>Everything you need in one place</h3>
+          <p>
+            Donec elit est, mattis lacinia arcu eu, efficitur consequat augue.
+            Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
+            nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="test" id="test">
+      <h2 class="test__title">Best of the month</h2>
+      <div class="test__box">
+        <img
+          class="test__box__profile"
+          src="https://i.ibb.co/gWWd75X/face-profile3.png"
+          alt="profile"
+        />
+        <div class="test__box__paraph">
+          <h3>Sanyo</h3>
+          <p>
+            Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat
+            mauris, ut suscipit massa ipsum eu neque. Orci varius natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          </p>
+        </div>
+      </div>
+      <div class="test__box">
+        <img
+        class="test__box__profile"
+        src="https://i.ibb.co/DrKL975/face-profile1.png"
+        alt="profile"
+      />
+        <div class="test__box__paraph">
+          <h3>Lebron</h3>
+          <p>
+            Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat
+            mauris, ut suscipit massa ipsum eu neque. Orci varius natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          </p>
+        </div>
+      </div>
+      <div class="test__box">
+        <img
+          class="test__box__profile"
+          src="https://i.ibb.co/XF86sLY/face-profile2.png"
+          alt="profile"
+        />
+        <div class="test__box__paraph">
+          <h3>Navarro</h3>
+          <p>
+            Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat
+            mauris, ut suscipit massa ipsum eu neque. Orci varius natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          </p>
+        </div>
+      </div>
+      <div class="test__btn" id="btn_test">
+        <button onclick="slideAttestation()">More</button>
+      </div>
+    </section>
+    <section class="message">
+      <!-- Message section -->
+      <div class="message__box">
+        <h3>Get to know the <span>best</span> teams of the year</h3>
+      </div>
+      <div class="message__btn">
+        <button>Go for it</button>
+      </div>
+    </section>
+    <footer class="footer" id="footer">
+      <!-- Footer section -->
+      <form class="footer__contact">
+        <input type="text" placeholder="Update in your inbox..." />
+        <button>Go</button>
+      </form>
+      <div class="footer__boxList">
+        <!-- Footer navigation links -->
+        <ul class="footer__boxList__left">
+          <li>Home</li>
+          <li>Pricing</li>
+          <li>Products</li>
+          <li>About us</li>
+        </ul>
+        <ul class="footer__boxList__right">
+          <li>Trainning</li>
+          <li>Community</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <!-- Social media icons -->
+        <a class="footer__social__item" href="#"
+          ><span class="bi bi-facebook"></span
+        ></a>
+        <a class="footer__social__item" href="#"
+          ><span class="bi bi-youtube"></span
+        ></a>
+        <a class="footer__social__item" href="#"
+          ><span class="bi bi-twitter"></span
+        ></a>
+        <a class="footer__social__item" href="#"
+          ><span class="bi bi-pinterest"></span
+        ></a>
+        <a class="footer__social__item" href="#"
+          ><span class="bi bi-instagram"></span
+        ></a>
+      </div>
+      <div class="footer__logo">
+        <img
+          class="footer__logo_img"
+          src="https://i.ibb.co/1Jw54BS/logo.png"
+          alt="logo-white"
+        />
+      </div>
+      <div class="footer__copyright">
+        <p>Copyright 2020. All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

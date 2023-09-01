@@ -1,0 +1,688 @@
+/* Estilo de la cabecera (header) */
+.header {
+  display: flex; /* Usar modelo de caja flexible */
+  align-items: center; /* Alinear elementos verticalmente */
+  justify-content: space-between; /* Espaciado entre elementos */
+  padding-inline: 2rem; /* Relleno horizontal */
+  padding-block: 1rem; /* Relleno vertical */
+  position: relative; /* Posición relativa */
+  transition: all ease-in-out 0.5s; /* Transición suave de propiedades */
+  z-index: 2; /* Orden de apilamiento en capas */
+}
+
+/* Estilo de la navegación deslizable (nav) */
+.header__nav {
+  position: fixed; /* Navegación fija en la ventana */
+  display: flex; /* Modelo de caja flexible */
+  align-items: center; /* Alinear elementos verticalmente */
+  justify-content: center; /* Centrar contenido */
+  background-color: white; /* Fondo blanco */
+  left: -100%; /* Fuera de la vista inicialmente */
+  top: 72.8px; /* Alineación superior */
+  opacity: 0.9; /* Opacidad reducida */
+  height: calc(100vh - 72.8px); /* Altura que ocupa toda la ventana excepto la parte superior */
+  width: 100vw; /* Ancho completo de la ventana */
+  transition: all ease-in-out 0.5s; /* Transición suave de propiedades */
+}
+
+/* Estilo de la lista dentro de la navegación */
+.header__nav ul {
+  font-size: 2rem; /* Tamaño de fuente grande */
+}
+
+/* Estilo de los elementos de la lista en la navegación */
+.header__nav ul li {
+  margin-bottom: 2rem; /* Margen inferior entre elementos de la lista */
+}
+
+/* Estilo del botón "sandwich" o hamburguesa */
+.header__sandwich {
+  font-size: 4rem; /* Tamaño de fuente grande */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  padding: 0; /* Sin relleno */
+}
+
+/* Estilo del elemento de contacto en la cabecera */
+.header__contact {
+  padding-inline: 2rem; /* Relleno horizontal */
+  padding-block: 0.5rem; /* Relleno vertical */
+  border-radius: 1rem; /* Bordes redondeados */
+  color: white; /* Texto en color blanco */
+  font-size: 0.7rem; /* Tamaño de fuente pequeño */
+  background-color: #8b48bf; /* Fondo de color morado */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: all ease-in-out 0.5s; /* Transición suave de propiedades */
+  display: none; /* Inicialmente oculto */
+}
+
+/* Cambio de color al pasar el cursor sobre el elemento de contacto */
+.header__contact:hover {
+  background-color: rgba(139, 72, 191, 0.7); /* Color de fondo con transparencia al pasar el cursor */
+}
+
+/* Estilo de la barra de navegación deslizable */
+.navSlide {
+  position: fixed; /* Navegación fija en la ventana */
+  width: 100%; /* Ancho completo */
+  background-color: white; /* Fondo blanco */
+}
+
+/* Animación de deslizamiento de la navegación */
+.slide {
+  left: 0%; /* Posición a la izquierda para mostrar la navegación */
+}
+
+  /* Define un espacio de relleno horizontal de 2 rem para el contenido principal */
+.content {
+  padding-inline: 2rem;
+}
+
+/* Agrega un margen inferior de 1 rem a todos los elementos secundarios directos de .content__box */
+.content__box > * {
+  margin-bottom: 1rem;
+}
+
+/* Estiliza el título dentro de .content__box */
+.content__box__title {
+  font-size: 2rem; /* Tamaño grande de fuente */
+  text-align: end; /* Alineación del texto a la derecha */
+  font-weight: bolder; /* Texto más grueso */
+  color: #232c50; /* Color de texto en tonos de azul */
+}
+
+/* Alinea el texto del párrafo a la derecha dentro de .content__box */
+.content__box__paraph {
+  text-align: end;
+}
+
+/* Estiliza un botón dentro de .content__box__btn */
+.content__box__btn {
+  display: flex;
+  justify-content: end; /* Justifica el contenido del botón a la derecha */
+}
+
+/* Estilos para el enlace dentro del botón */
+.content__box__btn a {
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 0.7rem;
+  background-color: #8b48bf;
+  cursor: pointer;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Efecto de gradiente con animación cuando se pasa el mouse sobre el botón */
+.content__box__btn a:hover::before {
+  position: absolute;
+  background-image: conic-gradient(from 90deg at 50% 50%, #3cddf3 10%, transparent 30%);
+  content: "";
+  width: 150%;
+  height: 150%;
+  animation: rotate 2s linear infinite;
+}
+
+/* Estilos para el texto dentro del botón */
+.content__box__btn a::after {
+  content: "Contact";
+  width: 95%;
+  border-radius: 1rem;
+  height: 90%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 0.7rem;
+  background-color: #8b48bf;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+ /* Definición de la animación 'rotate' para un giro de 0 a 360 grados */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos para el contenedor .about__box */
+.about__box {
+  background-color: #3cddf3; /* Fondo azul claro */
+  color: white; /* Texto en color blanco */
+  padding: 2rem; /* Espaciado interior de 2 rem */
+}
+
+/* Estilos para el título h2 dentro de .about__box */
+.about__box h2 {
+  font-size: 1.5rem; /* Tamaño de fuente grande */
+  font-weight: bolder; /* Texto en negrita */
+  margin-bottom: 2rem; /* Margen inferior de 2 rem */
+}
+
+/* Estilos para el contenedor .about__manage */
+.about__manage {
+  padding: 2rem 0 2rem 2rem; /* Espaciado interno en el lado derecho de 2 rem */
+}
+
+/* Estilos para la lista .about__manage__list */
+.about__manage__list {
+  font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+  margin-bottom: 1rem; /* Margen inferior de 1 rem */
+}
+
+/* Estilos para todos los elementos secundarios directos de .about__manage__list */
+.about__manage__list > * {
+  margin-bottom: 1rem; /* Margen inferior de 1 rem */
+}
+
+/* Estilos para el título h3 dentro de .about__manage__list */
+.about__manage__list h3 {
+  display: flex; /* Mostrar como flexbox */
+  align-items: center; /* Alinear verticalmente al centro */
+  color: #323851; /* Color de texto */
+  background-color: rgba(139, 72, 191, 0.3); /* Fondo con transparencia */
+  border-top-left-radius: 1rem; /* Bordes redondeados arriba a la izquierda */
+  border-bottom-left-radius: 1rem; /* Bordes redondeados abajo a la izquierda */
+  font-weight: bolder; /* Texto en negrita */
+}
+
+/* Estilos para el elemento span dentro de h3 */
+.about__manage__list h3 span {
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  border-radius: 1rem; /* Bordes redondeados */
+  color: white; /* Texto en color blanco */
+  font-size: 0.7rem; /* Tamaño de fuente más pequeño */
+  background-color: #8b48bf; /* Fondo de color morado */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  padding-inline: 1rem; /* Espaciado horizontal de 1 rem */
+  margin-right: 1rem; /* Margen derecho de 1 rem */
+}
+
+/* Estilos para el párrafo dentro de .about__manage__list */
+.about__manage__list p {
+  padding-right: 1rem; /* Espaciado derecho de 1 rem */
+  color: #b3b2b7; /* Color de texto gris */
+}
+
+  .test {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    overflow: hidden;
+    max-height: 440px;
+    position: relative;
+    transition: all ease-in-out 0.5s;
+  }
+  .test__title {
+    color: #242e53;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .test__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .test__box__profile {
+    border-radius: 100%;
+    margin-bottom:  1 rem;
+    position: relative;
+  }
+  .test__box__profile::before {
+    position: absolute;
+    content: "hola";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 38, 0.5);
+    z-index: 2;
+  }
+  .test__box__paraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 1rem;
+    color: #b3b2b7;
+  }
+  .test__box__paraph h3 {
+    color: #3f4868;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .test__box__paraph p {
+    text-align: center;
+    height: 120px;
+  }
+  .test__btn {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .test__btn button {
+    transition: all ease-in-out 0.5s;
+    padding-inline: 3rem;
+    padding-block: 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 10 rem;
+    background-color: #8b48bf;
+    cursor: pointer;
+  }
+  .test__btn button:hover {
+    background-color: rgba(139, 72, 191, 0.7);
+  }
+  
+  .message {
+    transition: all ease-in-out 0.5s;
+    background-color: #3cddf3;
+    color: white;
+    margin-top: 2.5rem;
+    padding: 2rem;
+  }
+  .message__box {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .message__btn {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .message__btn button {
+    transition: all ease-in-out 0.5s;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 10 rem;
+    background-color: #1e1e26;
+    cursor: pointer;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    width: 134px;
+    height: 44px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+     gap: 10px
+  }
+  .message__btn button:hover {
+    background-color: rgba(30, 30, 38, 0.7);
+  }
+  
+  .footer {
+    background-color: #1e1e26;
+    color: #b3b2b7;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 2rem;
+  }
+  .footer__contact {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__contact input {
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 0.7rem;
+    background-color: white;
+    cursor: pointer;
+    cursor: auto;
+    padding-left: 0.5rem;
+    width: 60%;
+    color: #b3b2b7;
+    margin-right: 1rem;
+  }
+  .footer__contact input:focus {
+    outline: solid #8b48bf 2px;
+  }
+  .footer__contact button {
+    transition: all ease-in-out 0.5s;
+    padding-inline: 5 rem;
+    padding-block: 3 rem;
+    border-radius: 3 rem;
+    color: white;
+    font-size: 3 rem;
+    background-color: #8b48bf;
+    cursor: pointer;
+    padding-inline: 1rem;
+  }
+  .footer__contact button:hover {
+    background-color: rgba(139, 72, 191, 0.7);
+  }
+  .footer__boxList {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+  }
+  .footer__boxList ul {
+    font-size: 0.8rem;
+  }
+  .footer__boxList ul li {
+    margin-bottom: 1rem;
+  }
+  .footer__social {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+  }
+  .footer__social__item {
+    transition: all ease-in-out 0.5s;
+  }
+  .footer__social__item:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100px;  
+    margin-bottom:  5 rem; 
+  }
+  
+  .footer__copyright {
+    text-align: center;
+    font-size: 0.5rem;
+  }
+  
+  @media screen and (min-width: 480px) {
+    .content__title {
+      font-size: 3rem;
+    }
+    .content__paraph {
+      font-size: 1.2rem;
+    }
+    .content__btn > a {
+      font-size: 1rem;
+      padding-block: 1rem;
+      padding-inline: 2.5rem;
+      border-radius: 1.5rem;
+    }
+    .about__box h2 {
+      font-size: 2.5rem;
+    }
+    .about__box__message {
+      line-height: 1.5rem;
+    }
+    .about__manage__list {
+      font-size: 1rem;
+    }
+    .about__manage__list > * {
+      margin-bottom: 2rem;
+    }
+    .about__manage__list p {
+      line-height: 2rem;
+    }
+    .test__box__paraph {
+      line-height: 1.7rem;
+    }
+    .message__box {
+      padding-inline: 1rem;
+      font-size: 8 rem;
+      font-weight: bolder;
+    }
+    .message__box span {
+      display: block;
+    }
+    .message__btn button {
+      font-size: 1 rem;
+    }
+    .footer__contact input {
+      padding-block: 0.7rem;
+      border-radius: 1.5rem;
+    }
+    .footer__contact button {
+      border-radius: 1.5rem;
+    }
+    .footer__social {
+      font-size: 1.5rem;
+    }
+    .footer__copyright {
+      font-size: 0.8rem;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .test {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 4rem;
+    }
+    .test__title {
+      flex-basis: 100%;
+    }
+    .test__box {
+      flex-basis: 45%;
+    }
+    .test__box__paraph p {
+      height: auto;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 10vw;
+      padding-block: 2rem;
+    }
+    .header__nav {
+      position: static;
+      height: auto;
+      width: auto;
+    }
+    .header__nav ul {
+      display: flex;
+      font-size: 1rem;
+    }
+    .header__nav ul li {
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+    .header__sandwich {
+      display: none;
+    }
+    .header__contact {
+      display: block;
+    }
+    .content {
+      display: flex;
+      padding-inline: 10vw;
+    }
+    .content > * {
+      flex-basis: 50%;
+    }
+    .content__box {
+      padding: 1rem 0 1rem 2rem;
+    }
+    .about__box {
+      background-color: #8b48bf;
+      display: flex;
+      padding-inline: 2rem;
+      justify-content: space-evenly;
+    }
+    .about__box > * {
+      width: 40%;
+    }
+    .message {
+      display: flex;
+      background-color: #8b48bf;
+      justify-content: space-between;
+    }
+    .message__box {
+      width: 60%;
+    }
+    .message__box span {
+      display: inline-block;
+    }
+    .message__btn {
+      align-items: center;
+
+    }
+    .message__btn button {
+      padding-inline: 2rem;
+      padding-block:  3.5 rem;
+      border-radius: 5 rem;
+      color: white;
+      font-size: 5 rem;
+      background-color: white;
+      cursor: pointer;
+      color: black;
+    }
+  }
+  @media screen and (min-width: 1030px) {
+    .test {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      max-height: 100%;
+      gap: 2rem;
+    }
+    .test__title {
+      flex-basis: 100%;
+    }
+    .test__box {
+      flex-basis: 30%;
+      margin-bottom: 3rem;
+    }
+    .test__btn {
+      position: static;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .content__box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .content__box__title {
+      font-size: 3.4rem;
+      text-indent: 1rem;
+    }
+    .about__manage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding-inline: 10vw;
+    }
+    .about__manage__list h3 {
+      background-color: white;
+      font-size: 1.5rem;
+    }
+    .about__manage__list h3 span {
+      font-size: 1.5rem;
+    }
+    .about__manage__list p {
+      padding-left: 4rem;
+    }
+    .about__manage__list:nth-child(3) {
+      grid-column: 2 span;
+      width: 50%;
+      justify-self: center;
+    }
+    .message {
+      padding-inline: 6rem;
+    }
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: repeat(3, min-content);
+      padding-inline: 4rem;
+      gap: 0;
+    }
+    .footer__logo {
+      order: -1;
+    }
+    .footer__boxList {
+      grid-row: 2 span;
+      justify-content: space-around;
+      order: 1;
+    }
+    .footer__boxList ul {
+      font-size: 1.5rem;
+    }
+    .footer__contact {
+      grid-row: 2 span;
+      order: 2;
+      align-self: flex-start;
+    }
+    .footer__social {
+      order: 3;
+      align-self: center;
+    }
+    .footer__social__item:hover {
+      transform: scale(1.2, 1.2);
+    }
+    .footer__copyright {
+      grid-column: 3 span;
+      order: 6;
+      justify-self: end;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    .header__nav ul {
+      font-size: 2rem;
+    }
+    .header__contact {
+      font-size: 1.5rem;
+    }
+    .content__box__paraph {
+      font-size: 1.5rem;
+    }
+    .content__box__btn a {
+      font-size: 1.5rem;
+    }
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "be Vietnam Pro";
+  }
+  .header__nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header__nav__list li {
+    margin-bottom: 10px; 
+  }
+  .footer__boxList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer__boxList li {
+    margin-bottom: 10px; 
+  }
+  .header__sandwich .bi {
+    color: black;
+  }
+  
+  .footer__social__item .bi {
+    color: white;
+  }
+  
